@@ -1,6 +1,9 @@
 package com.stgcodes.springdemo.mvc;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -13,6 +16,24 @@ public class SimpleFormController {
 	
 	@RequestMapping("/processForm")
 	public String processForm() {
+		return "processed-form";
+	}
+	
+	@RequestMapping("/processFormVersionTwo")
+	public String generateMessage(HttpServletRequest request, Model model) {
+		
+		//read the request parameter form the HTML form
+		String name = request.getParameter("studentName");
+		
+		//do things with the data
+		name = name.toUpperCase();
+		
+		//create a message
+		String result = "Yo, " + name + "!";
+		
+		//add the message to the model
+		model.addAttribute("message", result);
+		
 		return "processed-form";
 	}
 }
