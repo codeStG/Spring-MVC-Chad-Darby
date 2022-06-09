@@ -10,6 +10,11 @@
 
 <a href="versionOne/showForm">Simple Form</a>
 
+<br>
+<br>
+
+<a href="student/showForm">Student Registration Form</a>
+
 </body>
 
 </html>
