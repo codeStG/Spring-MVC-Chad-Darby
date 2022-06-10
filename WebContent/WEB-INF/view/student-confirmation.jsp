@@ -17,6 +17,11 @@ The student is confirmed: ${student.firstName} ${student.lastName}
 
 You selected the following country: ${student.country}
 
+<br>
+<br>
+
+Favorite Language: ${student.favoriteLanguage}
+
 </body>
 
 </html>
